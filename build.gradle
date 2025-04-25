@@ -1,0 +1,118 @@
+plugins {
+	id "com.crystaelix.loom" version "1.10.+"
+	id "net.kyori.blossom" version "1.+"
+}
+
+version = project.mod_version
+group = project.mod_group
+base {
+	archivesName = project.mod_id
+}
+
+repositories {
+	mavenCentral()
+	exclusiveContent {
+		forRepository {
+			maven {
+				url = "https://repo.cleanroommc.com/releases/"
+			}
+		}
+		filter {
+			includeGroup "zone.rong"
+		}
+	}
+	exclusiveContent {
+		forRepository {
+			maven {
+				url = "https://cursemaven.com/"
+			}
+		}
+		filter {
+			includeGroup "curse.maven"
+		}
+	}
+}
+
+loom {
+	silentMojangMappingsLicense()
+
+	mixin.defaultRefmapName = "${project.mod_id}.refmap.json"
+	generatedIntermediateMappings()
+}
+
+dependencies {
+	// Use an updated version of log4j
+	implementation "org.apache.logging.log4j:log4j-core:${project.log4j_version}"
+
+	minecraft "com.mojang:minecraft:1.12.2"
+	mappings "de.oceanlabs.mcp:mcp_stable:${project.mcp_version}"
+	legacyForge "net.minecraftforge:forge:${project.forge_version}"
+
+	annotationProcessor("zone.rong:mixinbooter:${project.mixinbooter_version}") { transitive = false }
+	implementation("zone.rong:mixinbooter:${project.mixinbooter_version}") { transitive = false }
+
+	modCompileOnly 'curse.maven:astral-sorcery-241721:3044416'
+	modCompileOnly 'curse.maven:correlated-243182:4091595'
+}
+
+sourceSets {
+	main {
+		// Make Gradle output resources and classes to the same directory
+		output.resourcesDir = java.destinationDirectory = layout.buildDirectory.dir("outputs/main")
+	}
+}
+
+def javaReplacements = [
+		"@MOD_ID": project.mod_id,
+		"@MOD_NAME": project.mod_name,
+		"@MOD_VERSION@": project.mod_version,
+]
+
+blossom {
+	replaceToken(javaReplacements)
+}
+
+def resourcesReplacements = [
+		"mod_id": project.mod_id,
+		"mod_name": project.mod_name,
+		"mod_author": project.mod_author,
+		"mod_description": project.mod_description,
+		"mod_version": project.mod_version,
+]
+
+processResources {
+	inputs.properties resourcesReplacements
+
+	filesMatching(["mcmod.info", "pack.mcmeta"]) {
+		it.expand resourcesReplacements
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	it.options.release = 8
+}
+
+java {
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+def manifestAttributes = [
+	"Implementation-Title": project.mod_id,
+	"Implementation-Vendor": project.mod_author,
+	"Implementation-Version": project.mod_version,
+	"Specification-Title": project.mod_name,
+	"Specification-Vendor": project.mod_author,
+	"Specification-Version": project.mod_spec_version,
+]
+
+jar {
+	manifest.attributes(manifestAttributes)
+}
+
+sourcesJar {
+	manifest.attributes(manifestAttributes)
+}

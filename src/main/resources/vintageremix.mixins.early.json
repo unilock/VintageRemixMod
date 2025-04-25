@@ -1,0 +1,10 @@
+{
+	"package": "cc.unilock.vintageremix.mixin.early",
+	"required": true,
+	"refmap": "vintageremix.refmap.json",
+	"target": "@env(DEFAULT)",
+	"minVersion": "0.8.5",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [],
+	"client": []
+}
