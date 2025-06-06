@@ -35,6 +35,9 @@ repositories {
 
 loom {
 	silentMojangMappingsLicense()
+	legacyForge {
+		mixinConfig "${project.mod_id}.mixins.early.json"
+	}
 
 	mixin.defaultRefmapName = "${project.mod_id}.refmap.json"
 	generatedIntermediateMappings()
