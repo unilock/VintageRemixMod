@@ -16,6 +16,9 @@ public class LateMixinLoader implements ILateMixinLoader {
 		if (Loader.isModLoaded("astralsorcery")) {
 			configs.add(PREFIX+"astralsorcery"+SUFFIX);
 		}
+		if (Loader.isModLoaded("computronics")) {
+			configs.add(PREFIX+"computronics"+SUFFIX);
+		}
 		if (Loader.isModLoaded("correlated")) {
 			configs.add(PREFIX+"correlated"+SUFFIX);
 		}
