@@ -56,6 +56,7 @@ dependencies {
 
 	modCompileOnly 'curse.maven:astral-sorcery-241721:3044416'
 	modCompileOnly 'curse.maven:correlated-243182:4091595'
+	modCompileOnly 'curse.maven:randomportals-308137:3136488'
 
 	compileOnly files('libs/Computronics-1.12.2-1.6.6-deobf.jar')
 	modCompileOnly 'curse.maven:railcraft-51195:3853491'
