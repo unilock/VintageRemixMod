@@ -15,10 +15,9 @@ public class LateMixinLoader implements ILateMixinLoader {
 	private static final Set<String> MODS = Sets.newHashSet(
 			"astralsorcery",
 			"computronics",
-			"correlated",
-			"thermionics_world"
+			"correlated"
 	);
-	
+
 	@Override
 	public List<String> getMixinConfigs() {
 		List<String> configs = new ArrayList<>();
