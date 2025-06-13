@@ -1,26 +1,31 @@
 package cc.unilock.vintageremix;
 
+import com.google.common.collect.Sets;
 import net.minecraftforge.fml.common.Loader;
 import zone.rong.mixinbooter.ILateMixinLoader;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class LateMixinLoader implements ILateMixinLoader {
 	private static final String PREFIX = "vintageremix.mixins.late.";
 	private static final String SUFFIX = ".json";
 
+	private static final Set<String> MODS = Sets.newHashSet(
+			"astralsorcery",
+			"computronics",
+			"correlated",
+			"thermionics_world"
+	);
+	
 	@Override
 	public List<String> getMixinConfigs() {
 		List<String> configs = new ArrayList<>();
-		if (Loader.isModLoaded("astralsorcery")) {
-			configs.add(PREFIX+"astralsorcery"+SUFFIX);
-		}
-		if (Loader.isModLoaded("computronics")) {
-			configs.add(PREFIX+"computronics"+SUFFIX);
-		}
-		if (Loader.isModLoaded("correlated")) {
-			configs.add(PREFIX+"correlated"+SUFFIX);
+		for (String mod : MODS) {
+			if (Loader.isModLoaded(mod)) {
+				configs.add(PREFIX+mod+SUFFIX);
+			}
 		}
 		return configs;
 	}

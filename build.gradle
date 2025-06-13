@@ -59,6 +59,7 @@ dependencies {
 	modCompileOnly 'curse.maven:randomportals-308137:3136488'
 
 	compileOnly files('libs/Computronics-1.12.2-1.6.6-deobf.jar')
+	modCompileOnly files('libs/ThermionicsWorld-MC1.12.2_ver1.0.2+noBasalt.jar')
 	modCompileOnly 'curse.maven:railcraft-51195:3853491'
 }
 
