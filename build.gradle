@@ -56,12 +56,16 @@ dependencies {
 
 	modCompileOnly 'curse.maven:astral-sorcery-241721:3044416'
 	modCompileOnly 'curse.maven:correlated-243182:4091595'
+	modCompileOnly 'curse.maven:metallurgy-4-reforged-300890:5279337'
+	modCompileOnly 'curse.maven:railcraft-51195:3853491'
 	modCompileOnly 'curse.maven:randomportals-308137:3136488'
 
 	compileOnly files('libs/Computronics-1.12.2-1.6.6-deobf.jar')
+	modCompileOnly files('libs/Iridescent-1.12.2-1.10.jar')
 	modCompileOnly files('libs/ThermionicsWorld-MC1.12.2_ver1.0.2.jar')
-	modCompileOnly 'curse.maven:metallurgy-4-reforged-300890:5279337'
-	modCompileOnly 'curse.maven:railcraft-51195:3853491'
+
+	modCompileOnly 'curse.maven:baubles-227083:2518667'
+	modCompileOnly 'curse.maven:bring-me-the-rings-309878:2653339'
 	modCompileOnly 'curse.maven:reid-629017:6292779'
 }
 
