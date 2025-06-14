@@ -18,6 +18,7 @@ public class LateMixinLoader implements ILateMixinLoader {
 			"correlated",
 			"iridescent",
 			"metallurgy",
+			"shotgunsandglitter",
 			"thermionics_world"
 	);
 

@@ -58,7 +58,8 @@ dependencies {
 	modCompileOnly 'curse.maven:correlated-243182:4091595'
 	modCompileOnly 'curse.maven:metallurgy-4-reforged-300890:5279337'
 	modCompileOnly 'curse.maven:railcraft-51195:3853491'
-	modCompileOnly 'curse.maven:randomportals-308137:3136488'
+	modCompileOnly 'curse.maven:shotguns-glitter-291455:2716990'
+//	modCompileOnly 'curse.maven:randomportals-308137:3136488'
 
 	compileOnly files('libs/Computronics-1.12.2-1.6.6-deobf.jar')
 	modCompileOnly files('libs/Iridescent-1.12.2-1.10.jar')
@@ -66,6 +67,8 @@ dependencies {
 
 	modCompileOnly 'curse.maven:baubles-227083:2518667'
 	modCompileOnly 'curse.maven:bring-me-the-rings-309878:2653339'
+	modCompileOnly 'curse.maven:had-enough-items-557549:6463525'
+	modCompileOnly 'curse.maven:librarianlib-continuous-1058274:5799813'
 	modCompileOnly 'curse.maven:reid-629017:6292779'
 }
 
