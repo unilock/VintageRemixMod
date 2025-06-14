@@ -16,6 +16,7 @@ public class LateMixinLoader implements ILateMixinLoader {
 			"astralsorcery",
 			"computronics",
 			"correlated",
+			"metallurgy",
 			"thermionics_world"
 	);
 

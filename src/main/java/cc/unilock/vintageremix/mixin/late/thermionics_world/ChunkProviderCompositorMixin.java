@@ -12,8 +12,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = ChunkProviderCompositor.class, remap = false)
 public class ChunkProviderCompositorMixin implements IModSupportsJEID {
+	// Excplicit REID support(?)
 	@Inject(method = "generateChunk", at = @At(value = "INVOKE", target = "Lcom/elytradev/thermionics/world/Benchmark;endFrame()V"))
-	private void generateChunk$preEndFrame(CallbackInfoReturnable<Chunk> cir, @Local Chunk chunk, @Local byte[] biomes) {
+	private void generateChunk$endFrame$pre(CallbackInfoReturnable<Chunk> cir, @Local Chunk chunk, @Local byte[] biomes) {
 		int[] intBiomeArray = ((INewChunk) chunk).getIntBiomeArray();
 		for (int i = 0; i < intBiomeArray.length; ++i) {
 			intBiomeArray[i] = biomes[i];

@@ -60,6 +60,7 @@ dependencies {
 
 	compileOnly files('libs/Computronics-1.12.2-1.6.6-deobf.jar')
 	modCompileOnly files('libs/ThermionicsWorld-MC1.12.2_ver1.0.2.jar')
+	modCompileOnly 'curse.maven:metallurgy-4-reforged-300890:5279337'
 	modCompileOnly 'curse.maven:railcraft-51195:3853491'
 	modCompileOnly 'curse.maven:reid-629017:6292779'
 }

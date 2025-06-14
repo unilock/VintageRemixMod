@@ -18,13 +18,15 @@ public class RepetitiveArcEffectMixin {
 	@Shadow
 	private EntityPlayer player;
 
+	// Don't add tamed entities to visitedEntities list
 	@WrapWithCondition(method = "fire", at = @At(value = "INVOKE", target = "Ljava/util/List;add(Ljava/lang/Object;)Z"))
-	private boolean fire$modifyVisitedEntities(List<EntityLivingBase> instance, @Coerce Object entity) {
+	private boolean fire$add$pre(List<EntityLivingBase> instance, @Coerce Object entity) {
 		return !((EntityLivingBase) entity).isOnSameTeam(this.player);
 	}
 
+	// Remove tamed entities from entities list
 	@Inject(method = "fire", at = @At(value = "INVOKE", target = "Ljava/util/List;removeAll(Ljava/util/Collection;)Z"))
-	private void fire$modifyEntities(CallbackInfo ci, @Local(ordinal = 1) List<EntityLivingBase> entities) {
+	private void fire$removeAll$pre(CallbackInfo ci, @Local(ordinal = 1) List<EntityLivingBase> entities) {
 		entities.removeIf(e -> e.isOnSameTeam(this.player));
 	}
 }

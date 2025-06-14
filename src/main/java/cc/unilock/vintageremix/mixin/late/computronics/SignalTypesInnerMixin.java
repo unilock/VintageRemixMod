@@ -9,8 +9,9 @@ import java.util.function.Supplier;
 
 @Mixin(targets = "pl/asie/computronics/integration/railcraft/SignalTypes$1", remap = false)
 public class SignalTypesInnerMixin {
+	// Update deprecated API usage
 	@Redirect(method = "<init>", at = @At(value = "NEW", target = "mods/railcraft/common/core/IRailcraftObjectContainer$Definition"))
-	private IRailcraftObjectContainer.Definition createDefinition(IRailcraftObjectContainer obj, String tag, Supplier<?> altRecipeObject) {
+	private IRailcraftObjectContainer.Definition init$createDefinition$redirect(IRailcraftObjectContainer obj, String tag, Supplier<?> altRecipeObject) {
 		return new IRailcraftObjectContainer.Definition(tag, altRecipeObject);
 	}
 }

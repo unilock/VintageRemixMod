@@ -11,8 +11,9 @@ import java.util.Set;
 
 @Mixin(value = DependencyParser.class, remap = false)
 public class DependencyParserMixin {
+	// Ignore randompatches required dependency
 	@WrapOperation(method = "parseDependency", at = @At(value = "INVOKE", target = "Ljava/util/Set;add(Ljava/lang/Object;)Z"))
-	private boolean wrapAdd(Set<?> set, Object entry, Operation<Boolean> original) {
+	private boolean parseDependency$add$wrap(Set<?> set, Object entry, Operation<Boolean> original) {
 		if (entry instanceof ArtifactVersion && "randompatches".equals(((ArtifactVersion) entry).getLabel())) {
 			return false;
 		} else {

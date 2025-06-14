@@ -5,7 +5,17 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = VintageRemix.MOD_ID, name = VintageRemix.MOD_NAME, version = VintageRemix.MOD_VERSION, dependencies = "required:mixinbooter;after:astralsorcery;after:computronics;after:correlated;after:thermionics_world")
+@Mod(
+		modid = VintageRemix.MOD_ID,
+		name = VintageRemix.MOD_NAME,
+		version = VintageRemix.MOD_VERSION,
+		dependencies = "required:mixinbooter;" + 
+				"after:astralsorcery;" +
+				"after:computronics;" +
+				"after:correlated;" +
+				"after:metallurgy;" +
+				"after:thermionics_world"
+)
 public class VintageRemix {
 	public static final String MOD_ID = "@MOD_ID@";
 	public static final String MOD_NAME = "@MOD_NAME@";

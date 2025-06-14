@@ -8,8 +8,9 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(GameSettings.class)
 public class GameSettingsMixin {
+	// Catch exceptions
 	@WrapMethod(method = "getSoundLevel")
-	private float getSoundLevel(SoundCategory category, Operation<Float> original) {
+	private float getSoundLevel$wrap(SoundCategory category, Operation<Float> original) {
 		try {
 			return original.call(category);
 		} catch (Throwable e) {
