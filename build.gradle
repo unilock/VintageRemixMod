@@ -61,6 +61,7 @@ dependencies {
 	modCompileOnly 'curse.maven:shotguns-glitter-291455:2716990'
 //	modCompileOnly 'curse.maven:randomportals-308137:3136488'
 
+	compileOnly files('libs/academy-1.1.6-UES-dev.jar')
 	compileOnly files('libs/Computronics-1.12.2-1.6.6-deobf.jar')
 	modCompileOnly files('libs/Iridescent-1.12.2-1.10.jar')
 	modCompileOnly files('libs/ThermionicsWorld-MC1.12.2_ver1.0.2.jar')
