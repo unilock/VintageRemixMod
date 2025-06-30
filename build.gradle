@@ -81,8 +81,8 @@ sourceSets {
 }
 
 def javaReplacements = [
-		"@MOD_ID": project.mod_id,
-		"@MOD_NAME": project.mod_name,
+		"@MOD_ID@": project.mod_id,
+		"@MOD_NAME@": project.mod_name,
 		"@MOD_VERSION@": project.mod_version,
 ]
 
@@ -119,12 +119,14 @@ java {
 }
 
 def manifestAttributes = [
-	"Implementation-Title": project.mod_id,
+	"Implementation-Title": project.base.archivesName.get(),
 	"Implementation-Vendor": project.mod_author,
 	"Implementation-Version": project.mod_version,
 	"Specification-Title": project.mod_name,
 	"Specification-Vendor": project.mod_author,
 	"Specification-Version": project.mod_spec_version,
+	"ForceLoadAsMod": "true",
+	"TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
 ]
 
 jar {
