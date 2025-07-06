@@ -20,7 +20,8 @@ public class LateMixinLoader implements ILateMixinLoader {
 			"iridescent",
 			"metallurgy",
 			"shotgunsandglitter",
-			"thermionics_world"
+			"thermionics_world",
+			"voidaicarcania"
 	);
 
 	@Override
