@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = LambdaLib2.class, remap = false)
 public class LambdaLib2Mixin {
+	// Don't initialize debug renderer (because it crashes during startup on macOS)
 	@WrapWithCondition(method = "initClient", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/fml/common/eventhandler/EventBus;register(Ljava/lang/Object;)V"))
 	private boolean initClient$register$wrap(EventBus instance, Object eventType) {
 		return false;

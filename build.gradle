@@ -71,6 +71,7 @@ dependencies {
 	modCompileOnly 'curse.maven:had-enough-items-557549:6463525'
 	modCompileOnly 'curse.maven:librarianlib-continuous-1058274:5799813'
 	modCompileOnly 'curse.maven:reid-629017:6292779'
+	modCompileOnly 'curse.maven:voidaic-arcania-293520:2650526'
 }
 
 sourceSets {

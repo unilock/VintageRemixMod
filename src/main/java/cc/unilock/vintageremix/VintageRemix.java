@@ -10,11 +10,14 @@ import org.apache.logging.log4j.Logger;
 		name = VintageRemix.MOD_NAME,
 		version = VintageRemix.MOD_VERSION,
 		dependencies = "required:mixinbooter;" + 
+				"after:academy;" +
 				"after:astralsorcery;" +
 				"after:computronics;" +
 				"after:correlated;" +
 				"after:metallurgy;" +
-				"after:thermionics_world"
+				"after:shotgunsandglitter;" +
+				"after:thermionics_world;" +
+				"after:voidaicarcania;"
 )
 public class VintageRemix {
 	public static final String MOD_ID = "@MOD_ID@";

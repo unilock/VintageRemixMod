@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(value = ShotgunJEIPlugin.class, remap = false)
 public class ShotgunJEIPluginMixin implements IModPlugin {
+	// Properly register subtype interpreter
 	@Override
 	public void registerSubtypes(ISubtypeRegistry subtypeRegistry) {
 		subtypeRegistry.registerSubtypeInterpreter(ModItems.BULLET, (stack) -> BulletType.byOrdinal(stack.getItemDamage()).serializeName + "_" + ModItems.BULLET.getEffectFromItem(stack).getID());

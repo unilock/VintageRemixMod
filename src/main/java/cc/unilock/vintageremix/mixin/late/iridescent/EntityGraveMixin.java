@@ -9,6 +9,8 @@ import zabi.minecraft.bmtr.ModConfig;
 
 @Mixin(value = EntityGrave.class, remap = false)
 public class EntityGraveMixin {
+	// Add support for extra slots
+
 	@Unique
 	private static final int ADDITIONAL = ModConfig.getExtraSlots(); // Bring Me The Rings!
 
