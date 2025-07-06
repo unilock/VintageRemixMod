@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 
-@IFMLLoadingPlugin.Name("VintageRemix")
+@IFMLLoadingPlugin.Name("VintageRemixCore")
 @IFMLLoadingPlugin.MCVersion("1.12.2")
 public class EarlyMixinLoader implements IFMLLoadingPlugin, IEarlyMixinLoader {
 	@Override
