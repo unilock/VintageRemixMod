@@ -126,6 +126,7 @@ def manifestAttributes = [
 	"Specification-Title": project.mod_name,
 	"Specification-Vendor": project.mod_author,
 	"Specification-Version": project.mod_spec_version,
+	"FMLCorePluginContainsFMLMod": "true",
 	"ForceLoadAsMod": "true",
 	"TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
 ]
