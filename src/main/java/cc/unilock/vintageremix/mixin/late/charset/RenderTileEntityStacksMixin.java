@@ -38,9 +38,9 @@ import java.util.function.Function;
 
 @Mixin(RenderTileEntityStacks.class)
 public abstract class RenderTileEntityStacksMixin {
-	@Shadow private static @Final int[][][] QUAD_ORDERS;
-	@Shadow private static @Final EnumFacing[][] QUAD_FACES;
-	@Shadow private static @Final int[][] QUAD_UVS;
+	@Shadow(remap = false) private static @Final int[][][] QUAD_ORDERS;
+	@Shadow(remap = false) private static @Final EnumFacing[][] QUAD_FACES;
+	@Shadow(remap = false) private static @Final int[][] QUAD_UVS;
 
 	@Shadow public abstract ModelTransformer.IVertexTransformer createTransformer(int i, ItemStack stack, long rand);
 	@Shadow public abstract boolean isAmbientOcclusion();
