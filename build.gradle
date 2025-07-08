@@ -14,6 +14,18 @@ repositories {
 	exclusiveContent {
 		forRepository {
 			maven {
+				name = "ElytraDev"
+				url = "https://oldrepo.y2k.diy/"
+			}
+		}
+		filter {
+			includeGroup "pl.asie.charset"
+		}
+	}
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "CleanroomMC"
 				url = "https://repo.cleanroommc.com/releases/"
 			}
 		}
@@ -24,6 +36,7 @@ repositories {
 	exclusiveContent {
 		forRepository {
 			maven {
+				name = "CurseForge"
 				url = "https://cursemaven.com/"
 			}
 		}
@@ -72,6 +85,8 @@ dependencies {
 	modCompileOnly 'curse.maven:librarianlib-continuous-1058274:5799813'
 	modCompileOnly 'curse.maven:reid-629017:6292779'
 	modCompileOnly 'curse.maven:voidaic-arcania-293520:2650526'
+
+	modCompileOnly 'pl.asie.charset:charset:0.5.6.4.19:full'
 }
 
 sourceSets {

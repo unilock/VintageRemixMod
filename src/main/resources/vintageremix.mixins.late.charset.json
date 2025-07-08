@@ -1,0 +1,16 @@
+{
+	"package": "cc.unilock.vintageremix.mixin.late.charset",
+	"required": true,
+	"refmap": "vintageremix.refmap.json",
+	"target": "@env(DEFAULT)",
+	"minVersion": "0.8.5",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"accessor.BlockStacksAccessor",
+		"accessor.StackShapesAccessor",
+		"accessor.TileEntityStacksAccessor"
+	],
+	"client": [
+		"RenderTileEntityStacksMixin"
+	]
+}

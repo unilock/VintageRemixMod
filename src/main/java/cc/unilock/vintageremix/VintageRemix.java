@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 		dependencies = "required:mixinbooter;" + 
 				"after:academy;" +
 				"after:astralsorcery;" +
+				"after:charset;" +
 				"after:computronics;" +
 				"after:correlated;" +
 				"after:metallurgy;" +
