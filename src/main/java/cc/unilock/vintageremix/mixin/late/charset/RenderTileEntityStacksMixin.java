@@ -42,7 +42,7 @@ public abstract class RenderTileEntityStacksMixin {
 	@Shadow(remap = false) private static @Final EnumFacing[][] QUAD_FACES;
 	@Shadow(remap = false) private static @Final int[][] QUAD_UVS;
 
-	@Shadow public abstract ModelTransformer.IVertexTransformer createTransformer(int i, ItemStack stack, long rand);
+	@Shadow(remap = false) public abstract ModelTransformer.IVertexTransformer createTransformer(int i, ItemStack stack, long rand);
 	@Shadow public abstract boolean isAmbientOcclusion();
 
 	/**

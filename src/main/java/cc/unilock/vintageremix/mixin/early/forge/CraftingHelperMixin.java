@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(CraftingHelper.class)
+@Mixin(value = CraftingHelper.class, remap = false)
 public class CraftingHelperMixin {
 	// Quiet recipe loading errors
 

@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 import java.util.IdentityHashMap;
 
-@Mixin(CapabilityManager.class)
+@Mixin(value = CapabilityManager.class, remap = false)
 public interface CapabilityManagerAccessor {
 	@Accessor
 	IdentityHashMap<String, Capability<?>> getProviders();
