@@ -12,7 +12,8 @@ public class EntityGraveMixin {
 	// Add support for extra slots
 
 	@Unique
-	private static final int ADDITIONAL = ModConfig.getExtraSlots(); // Bring Me The Rings!
+	private static final int ADDITIONAL =
+			ModConfig.getExtraSlots(); // Bring Me The Rings!
 
 	@ModifyExpressionValue(method = "<init>", at = @At(value = "CONSTANT", args = "intValue=49"))
 	private int init$constant$modifyInventorySize(int original) {

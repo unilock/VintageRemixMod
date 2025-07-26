@@ -6,7 +6,9 @@
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-		"forge.DependencyParserMixin"
+		"forge.CraftingHelperMixin",
+		"forge.DependencyParserMixin",
+		"forge.accessor.CapabilityManagerAccessor"
 	],
 	"client": [
 		"minecraft.GameSettingsMixin"
