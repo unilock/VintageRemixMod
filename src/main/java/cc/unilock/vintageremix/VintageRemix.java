@@ -15,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 				"after:charset;" +
 				"after:computronics;" +
 				"after:correlated;" +
+				"after:geckolib3;" +
 				"after:iridescent;" +
 				"after:metallurgy;" +
 				"after:shotgunsandglitter;" +

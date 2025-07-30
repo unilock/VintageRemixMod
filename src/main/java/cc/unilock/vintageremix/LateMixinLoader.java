@@ -18,6 +18,7 @@ public class LateMixinLoader implements ILateMixinLoader {
 			"charset",
 			"computronics",
 			"correlated",
+			"geckolib3",
 			"iridescent",
 			"metallurgy",
 			"shotgunsandglitter",
