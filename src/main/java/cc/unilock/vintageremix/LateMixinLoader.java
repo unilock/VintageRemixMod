@@ -20,6 +20,7 @@ public class LateMixinLoader implements ILateMixinLoader {
 			"correlated",
 			"geckolib3",
 			"iridescent",
+			"jei",
 			"metallurgy",
 			"shotgunsandglitter",
 			"thermionics_world",
