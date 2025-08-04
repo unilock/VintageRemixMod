@@ -9,7 +9,8 @@
     "forge.CraftingHelperMixin",
     "forge.DependencyParserMixin",
     "forge.accessor.CapabilityManagerAccessor",
-    "minecraft.CraftingManagerMixin"
+    "minecraft.CraftingManagerMixin",
+    "minecraft.EntityLivingBaseMixin"
   ],
   "client": [
     "minecraft.GameSettingsMixin"
