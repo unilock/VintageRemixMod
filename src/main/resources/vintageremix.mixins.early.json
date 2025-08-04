@@ -8,6 +8,7 @@
   "mixins": [
     "forge.CraftingHelperMixin",
     "forge.DependencyParserMixin",
+    "forge.ForgeModContainerMixin",
     "forge.accessor.CapabilityManagerAccessor",
     "minecraft.CraftingManagerMixin",
     "minecraft.EntityLivingBaseMixin"
