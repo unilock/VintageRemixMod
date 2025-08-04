@@ -6,16 +6,16 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import software.bernie.geckolib3.resource.GeckoLibCache;
 
-@Mixin(value = GeckoLibCache.class, remap = false)
+@Mixin(value = GeckoLibCache.class)
 public abstract class GeckoLibCacheMixin {
 	// Silence extraneous logging
 
-	@Redirect(method = "onResourceManagerReload", at = @At(value = "INVOKE", target = "Ljava/lang/Exception;printStackTrace()V"), remap = true)
+	@Redirect(method = "onResourceManagerReload", at = @At(value = "INVOKE", target = "Ljava/lang/Exception;printStackTrace()V", remap = false))
 	private void onResourceManagerReload$printStackTrace(Exception instance) {
 		// NO-OP
 	}
 
-	@Redirect(method = "onResourceManagerReload", at = @At(value = "INVOKE", target = "Lorg/apache/logging/log4j/Logger;error(Ljava/lang/String;Ljava/lang/Throwable;)V"), remap = true)
+	@Redirect(method = "onResourceManagerReload", at = @At(value = "INVOKE", target = "Lorg/apache/logging/log4j/Logger;error(Ljava/lang/String;Ljava/lang/Throwable;)V", remap = false))
 	private void onResourceManagerReload$error(Logger instance, String s, Throwable throwable) {
 		instance.error(s);
 	}

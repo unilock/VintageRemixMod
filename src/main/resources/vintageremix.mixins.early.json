@@ -1,16 +1,17 @@
 {
-	"package": "cc.unilock.vintageremix.mixin.early",
-	"required": true,
-	"refmap": "vintageremix.refmap.json",
-	"target": "@env(DEFAULT)",
-	"minVersion": "0.8.5",
-	"compatibilityLevel": "JAVA_8",
-	"mixins": [
-		"forge.CraftingHelperMixin",
-		"forge.DependencyParserMixin",
-		"forge.accessor.CapabilityManagerAccessor"
-	],
-	"client": [
-		"minecraft.GameSettingsMixin"
+  "package": "cc.unilock.vintageremix.mixin.early",
+  "required": true,
+  "refmap": "vintageremix.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "forge.CraftingHelperMixin",
+    "forge.DependencyParserMixin",
+    "forge.accessor.CapabilityManagerAccessor",
+    "minecraft.CraftingManagerMixin"
+  ],
+  "client": [
+    "minecraft.GameSettingsMixin"
 	]
 }
