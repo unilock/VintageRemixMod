@@ -17,7 +17,6 @@ import org.apache.logging.log4j.Logger;
 				"after:correlated;" +
 				"after:geckolib3;" +
 				"after:iridescent;" +
-				"after:jei;" +
 				"after:metallurgy;" +
 				"after:shotgunsandglitter;" +
 				"after:thermionics_world;" +

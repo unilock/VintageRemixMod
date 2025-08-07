@@ -82,7 +82,7 @@ dependencies {
 
 	modCompileOnly 'curse.maven:baubles-227083:2518667'
 	modCompileOnly 'curse.maven:bring-me-the-rings-309878:2653339'
-	modCompileOnly 'curse.maven:had-enough-items-557549:6827723'
+	modCompileOnly 'curse.maven:had-enough-items-557549:6825777'
 	modCompileOnly 'curse.maven:librarianlib-continuous-1058274:5799813'
 	modCompileOnly 'curse.maven:reid-629017:6292779'
 	modCompileOnly 'curse.maven:voidaic-arcania-293520:2650526'
