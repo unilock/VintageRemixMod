@@ -68,6 +68,7 @@ dependencies {
 	implementation("zone.rong:mixinbooter:${project.mixinbooter_version}") { transitive = false }
 
 	modCompileOnly 'curse.maven:astral-sorcery-241721:3044416'
+    modCompileOnly 'curse.maven:auraddons-307663:2696186'
 	modCompileOnly 'curse.maven:correlated-243182:4091595'
 	modCompileOnly 'curse.maven:geckolib-388172:4020277'
 	modCompileOnly 'curse.maven:metallurgy-4-reforged-300890:5279337'

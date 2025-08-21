@@ -1,12 +1,12 @@
 {
-	"package": "cc.unilock.vintageremix.mixin.late.astralsorcery",
+	"package": "cc.unilock.vintageremix.mixin.late.auraddons",
 	"required": true,
 	"refmap": "vintageremix.refmap.json",
 	"target": "@env(DEFAULT)",
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-		"MiscUtilsMixin"
+		"TileWitherProoferMixin"
 	],
 	"client": []
 }
