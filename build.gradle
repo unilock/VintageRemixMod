@@ -1,5 +1,5 @@
 plugins {
-	id "com.crystaelix.loom" version "1.10.+"
+	id "com.crystaelix.loom" version "1.13.+"
 	id "net.kyori.blossom" version "1.+"
 }
 

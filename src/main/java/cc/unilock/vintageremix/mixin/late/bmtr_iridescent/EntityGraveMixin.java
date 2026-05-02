@@ -1,4 +1,4 @@
-package cc.unilock.vintageremix.mixin.late.iridescent;
+package cc.unilock.vintageremix.mixin.late.bmtr_iridescent;
 
 import com.elytradev.iridescent.module.spiritgraves.EntityGrave;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;

@@ -34,6 +34,9 @@ public class LateMixinLoader implements ILateMixinLoader {
 				configs.add(PREFIX+mod+SUFFIX);
 			}
 		}
+		if (Loader.isModLoaded("bmtr") && Loader.isModLoaded("iridescent")) {
+			configs.add(PREFIX+"btmr_iridescent"+SUFFIX);
+		}
 		return configs;
 	}
 }
