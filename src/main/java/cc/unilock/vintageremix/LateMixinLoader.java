@@ -13,7 +13,6 @@ public class LateMixinLoader implements ILateMixinLoader {
 	private static final String SUFFIX = ".json";
 
 	private static final Set<String> MODS = Sets.newHashSet(
-			"academy",
 			"astralsorcery",
 			"auraddons",
 			"charset",
