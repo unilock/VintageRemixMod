@@ -5,6 +5,7 @@
 	"target": "@env(DEFAULT)",
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
+	"mixinextras": {"minVersion": "0.5.0"},
 	"mixins": [
 		"ItemFlightTiaraMixin"
 	],
