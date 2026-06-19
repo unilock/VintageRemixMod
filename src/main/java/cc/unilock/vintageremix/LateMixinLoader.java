@@ -15,6 +15,7 @@ public class LateMixinLoader implements ILateMixinLoader {
 	private static final Set<String> MODS = Sets.newHashSet(
 			"astralsorcery",
 			"auraddons",
+			"botania",
 			"charset",
 			"computronics",
 			"correlated",
